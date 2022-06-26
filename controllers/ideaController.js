@@ -37,7 +37,7 @@ module.exports = {
     updateIdeaById: async (req, res) => {
         const { ideaId } = req.params;
         try {
-            const updatedIdea = await.Idea.findIdAndUpdate(
+            const updatedIdea = await Idea.findIdAndUpdate(
                 ideaId,
                 {...req.body},
                 {
@@ -60,7 +60,7 @@ module.exports = {
         }
     },
 
-    addRetweenToIdeaById: async (req, res) => {
+    addRetweetToIdeaById: async (req, res) => {
         const {ideaId} = req.params;
         const { retweetBody, handle } = req.body;
         try {
