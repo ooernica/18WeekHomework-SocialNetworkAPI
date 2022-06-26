@@ -66,7 +66,7 @@ module.exports = {
         }
     },
 
-    addFollowerToUserId: async (req, res) => {
+    addFollowerToUserById: async (req, res) => {
         const { userId, followerId } = req.params;
         try {
             const updatedUser = await User.findByIdAndUpdate(userId,
@@ -85,7 +85,7 @@ module.exports = {
         }
     },
 
-    deleteFollowerToUSerById: async (req, res) => {
+    deleteFollowerToUserById: async (req, res) => {
         const { userId, followerId } = req.params;
         try {
             const updatedUser = await User.findByIdAndUpdate(userId,

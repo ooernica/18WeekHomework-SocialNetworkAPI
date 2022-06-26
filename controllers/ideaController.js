@@ -15,7 +15,7 @@ module.exports = {
         }
     },
 
-    getallIdeas: async (req, res) => {
+    getAllIdeas: async (req, res) => {
         try {
             const ideas = await Idea.find();
             res.json(ideas);
