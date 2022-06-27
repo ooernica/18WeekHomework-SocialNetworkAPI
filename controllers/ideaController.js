@@ -37,7 +37,7 @@ module.exports = {
     updateIdeaById: async (req, res) => {
         const { ideaId } = req.params;
         try {
-            const updatedIdea = await Idea.findIdAndUpdate(
+            const updatedIdea = await Idea.findByIdAndUpdate(
                 ideaId,
                 {...req.body},
                 {
@@ -64,10 +64,10 @@ module.exports = {
         const {ideaId} = req.params;
         const { retweetBody, handle } = req.body;
         try {
-            const updatedIdea = await Idea.findByIdandUpdate(ideaId,
+            const updatedIdea = await Idea.findByIdAndUpdate(ideaId,
                 {
                     $push: {
-                        interaction: {
+                        interactions: {
                             retweetBody,
                             handle
                         }
@@ -83,10 +83,10 @@ module.exports = {
         }
     },
 
-    deleteInteractiontoIdeaById: async (req, res) => {
+    deleteInteractionToIdeaById: async (req, res) => {
         const { ideaId, interactId } = req.params;
         try {
-            const updatedIdea = await Idea.findByAndUpdate(ideaId,
+            const updatedIdea = await Idea.findByIdAndDelete(ideaId,
                 {
                     $pull: {
                         interactions: {

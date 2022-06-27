@@ -3,7 +3,7 @@ const { createIdea,
     getAllIdeas,
     getIdeaById,
     addRetweetToIdeaById,
-    deleteInteractiontoIdeaById,
+    deleteInteractionToIdeaById,
     updateIdeaById,
     deleteIdeaById
  } = require('../../../controllers/ideaController');
@@ -13,7 +13,7 @@ router.route('/')
     .get(getAllIdeas);
 
 router.put('/:ideaId/interactions', addRetweetToIdeaById);
-router.delete('/:ideaId/interactions/:interactionId', deleteInteractiontoIdeaById);
+router.delete('/:ideaId/interactions/:interactionId', deleteInteractionToIdeaById);
 
 router.route('/:ideaId')
      .get(getIdeaById)
