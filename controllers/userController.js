@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose');
 const { isEmail } = require('validator');
+const { User } = require('../models');
 
 module.exports = {
     createUser: async (req, res) => {
