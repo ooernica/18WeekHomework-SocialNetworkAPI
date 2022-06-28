@@ -13,7 +13,7 @@ mongoose.connect('mongodb://localhost:27017/todoMongoDB')
     .catch(err => console.error(err));
 
 app.use(express.json());
-app.use(express.urlencoded({ extendeed: true })); 
+app.use(express.urlencoded({ extended: true })); 
 app.use(routes);
 
 app.listen(PORT, () => console.log('server is on'));

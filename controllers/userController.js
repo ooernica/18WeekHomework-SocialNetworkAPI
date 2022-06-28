@@ -1,4 +1,3 @@
-const { Schema, model } = require('mongoose');
 const { isEmail } = require('validator');
 const { User } = require('../models');
 
@@ -7,9 +6,7 @@ module.exports = {
         const { handle, email } = req.body;
         if (!isEmail(email)) {
             return res.status(401).json({ error: 'Invalid email.' });
-
         }
-
         try {
             const newUser = await User.create({
                 handle,
@@ -45,7 +42,7 @@ module.exports = {
         try {
             const updatedUser = await User.findByIdAndUpdate(
                 userId,
-                { ...req.body },
+                {...req.body},
                 {
                     new: true,
                     runValidators: true,
@@ -104,5 +101,4 @@ module.exports = {
             res.json(e);
         }
     },
-    
 };
