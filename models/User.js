@@ -34,11 +34,10 @@ const userSchema = new Schema({
     {
         toJSON: {
             virtuals: true,
-            getters: true,
         },
     });
 
-userSchema.virtual('followerCount').get(function() {
+userSchema.virtual('followerCount').get(function () {
     return this.followers.length;
 });
 

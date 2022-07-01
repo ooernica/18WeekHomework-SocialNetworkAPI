@@ -86,7 +86,7 @@ module.exports = {
     deleteInteractionToIdeaById: async (req, res) => {
         const { ideaId, interactId } = req.params;
         try {
-            const updatedIdea = await Idea.findByIdAndDelete(ideaId,
+            const updatedIdea = await Idea.findByAndUpdate(ideaId,
                 {
                     $pull: {
                         interactions: {

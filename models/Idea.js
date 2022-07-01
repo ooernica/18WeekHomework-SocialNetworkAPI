@@ -51,13 +51,13 @@ const ideaSchema = new Schema({
 },
     {
         toJSON: {
-            virtuals:true,
+            virtuals: true,
             getters: true,
         },
         id: false,
     });
 
-ideaSchema.virtual('interactCount').get(function() {
+ideaSchema.virtual('interactCount').get(function () {
     return this.interactions.length;
 });
 

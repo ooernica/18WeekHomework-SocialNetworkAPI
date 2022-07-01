@@ -13,7 +13,7 @@ router.route('/')
     .get(getAllIdeas);
 
 router.put('/:ideaId/interactions', addRetweetToIdeaById);
-router.delete('/:ideaId/interactions/:interactionId', deleteInteractionToIdeaById);
+router.delete('/:ideaId/interactions/:interactId', deleteInteractionToIdeaById);
 
 router.route('/:ideaId')
      .get(getIdeaById)

@@ -90,7 +90,7 @@ const seedDb = async () => {
     ];
     console.log(ideasToCreate)
     const ideas = await Idea.insertMany(ideasToCreate);
-    console.log('Database Successfully Seeded');
+    console.log('Seeded Database');
 
     process.exit(0);
 };

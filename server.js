@@ -8,12 +8,12 @@ const app = express();
 
 mongoose.connect('mongodb://localhost:27017/todoMongoDB')
     .then(async () => {
-        console.log('Connected to MongoDB');
+        console.log('Successfully Connected to MongoDB');
     })
-    .catch(err => console.error(err));
+    .catch(err => console.log(err));
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: true })); 
+app.use(express.urlencoded({ extended: true }));
 app.use(routes);
 
 app.listen(PORT, () => console.log('server is on'));
