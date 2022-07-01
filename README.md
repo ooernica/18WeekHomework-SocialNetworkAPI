@@ -28,7 +28,7 @@ use postman to test routes -- see video for more how
           
 ## Deployment
 
-N/A, what the [video]() of the code in action 
+N/A, what the [video](https://drive.google.com/file/d/1QTNh2Gh1zQS5I7wM8p1JXw-grOqiCyYN/view) of the code in action 
         
 ## License
 N/A
